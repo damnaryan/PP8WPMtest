@@ -35,7 +35,7 @@ def wpm_text(stdscr):
     wpm = 0
     start_time = time.time()                                         # stores the current time in seconds.
     stdscr.nodelay(True)                                              
-    # this is to continue to reduce the wpm while the user is not typing, by bypassing the 35th line.
+    # this is to continue to reduce the wpm while the user is not typing, by bypassing the 55th line.
     while True:                                                      # since the user has to keep entering the letters.
         elasped_time = max(time.time() - start_time, 1)              
         # max is taken because for the first time the elasped time will be 0. And this will give 'dividing by 0' error ahead.
@@ -65,7 +65,7 @@ def wpm_text(stdscr):
 
 def overlaying_text(stdscr, target, current, wpm): # equalising a parameter to 0 makes it a optional parameter
     stdscr.addstr(target)
-    stdscr.addstr(3,0, f"WPM: {wpm}")
+    stdscr.addstr(1,0, f"WPM: {wpm}")
 
     for i, char in enumerate(current):
         correct_char = target[i]
