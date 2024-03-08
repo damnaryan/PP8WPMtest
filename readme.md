@@ -16,6 +16,9 @@ THIS IS A GOOD ADVANCE LEVEL PROJECT. At least for me, it is. This is WPA tester
 - *stdscr.nodelay(True)* - Turning on the no delay, in this program this feature is used to still change the wpm when the user is not typing (as the getkey() cmd used to wait for the user to input a key a then the wpm was calculated).
 - *stdscr.nodelay(False)* - Turn off the no delay.
 2) *wrapper()* function: wrapper function is used to revert back the changes made to the terminal to its original form. This the reason the "main" function is inside a wrapper function. Cause we want the terminal to revert back to normal.
-3) 
-
+3) *ord(key)* - used to get the ordinal value / ASCII value for a particaluar keyboard key.
+4) *a = "".join(list)* - converts everything in a list to a string with a dersired seperator in between the items of the list and strores into a variable (here, a).
+5) *try: & except:* - Try is used to try a block of code for errors and except is used to handle the error (if the error was found).
+In this program this was used to handle the getkey() code inside the nodelay() block, as the user was not entering any key, handling the key from getkey() would have given a error, so except was used to rerun the previous code block again when there was no input from the user. 
+6) *list.append(item)* - Used to append/add a item in a list.
  
